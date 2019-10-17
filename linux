@@ -1,0 +1,8 @@
+Networking
+    nmcli
+  IP
+    ip addr ~ show ip address
+  DNS
+    nslookup <domain name>
+    dig <domain name>
+    systemd-resolve --status
