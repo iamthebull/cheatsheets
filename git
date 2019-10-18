@@ -1,0 +1,61 @@
+git --version			~ displays version
+
+Setup GIT
+git config --global user.name "David Bull"
+git config --global user.email "david.bull@apacsystems.ca"
+git config --list
+
+Initialize local repo
+git init
+
+Link to remote repo
+git remote add origin <url>
+git remote 
+git remote -v
+
+Clone remote repo
+git clone <url> <local dir>
+
+Pull from remote repo
+git pull origin master
+
+Push to remote repo
+git push origin master
+
+Check status
+git status
+git diff
+
+Add files
+git add -A
+git add filename
+
+Remove files
+git reset
+git reset filename
+
+Commit
+git commit -m "Commit message"
+
+
+1. Install git
+2. Set git config
+  > git config --global user.name "David Bull"
+  > git config --global user.email "david.bull@apacsystems.ca"
+3. Initialize new local repository
+  > git init
+4. Add files and commit
+  - local master branch will not be created until this step is complete
+  - directory must not be empty
+  > git add .
+  > git commit -m "Initial commit"
+5. Create github repository and create pointer in local repository
+  - add ssh keys to github
+  > git remote add origin <url>
+6. Fetch master branch from remote repository
+  > git fetch origin master
+7. Merger master branches
+  > git merge origin/master --allow-unrelated-histories
+8. Push changes to github repo
+  > git push origin master
+
