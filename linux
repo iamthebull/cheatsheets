@@ -1,3 +1,11 @@
+System
+  Display system info
+    inxi - Fxz
+    lshw
+    lscpu
+  Storage
+    lsblk
+
 Networking
     nmcli
   IP
