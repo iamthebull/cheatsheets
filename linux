@@ -14,3 +14,11 @@ Networking
     nslookup <domain name>
     dig <domain name>
     systemd-resolve --status
+USERS
+adduser ~ interactive add user account
+usermod -aG groupname user ~ adds 'user' to the 'groupname' group
+
+DNS
+sudo systemd-resolve --flush-cache
+sudo systemd-resolve --statistics
+
