@@ -1,61 +1,90 @@
-git --version			~ displays version
+Display version
+> git --version
 
 Setup GIT
-git config --global user.name "David Bull"
-git config --global user.email "david.bull@apacsystems.ca"
-git config --list
+> git config --global user.name "David Bull"
+> git config --global user.email "david.bull@apacsystems.ca"
+> git config --list
 
 Initialize local repo
-git init
+> git init
 
 Link to remote repo
-git remote add origin <url>
-git remote 
-git remote -v
+> git remote add origin <url>
+> git remote
+> git remote -v
 
 Clone remote repo
-git clone <url> <local dir>
+> git clone <url> <local dir>
 
 Pull from remote repo
-git pull origin master
+> git pull origin master
 
 Push to remote repo
-git push origin master
+> git push origin master
 
 Check status
-git status
-git diff
+> git status
+> git diff
 
 Add files
-git add -A
-git add filename
+> git add -A  // adds all files
+> git add filename    // adds single files
+> git add *.py    // adds all .py files
 
 Remove files
-git reset
-git reset filename
+> git reset
+> git reset filename
 
 Commit
-git commit -m "Commit message"
+> git commit -m "Commit message"
 
+Branches
+** in new repo must add files and commit before branch is enabled/selected
+> git branch    // lists branches and indicates currently selected branch
+> git checkout -b branchName    // creates new branch branchName and switches to it
+> git checkout branchName    // switches to existing branch branchName
+> git branch -m <old name> <new name>    // renames the branch from <old name> to <new name>
 
-1. Install git
-2. Set git config
-  > git config --global user.name "David Bull"
-  > git config --global user.email "david.bull@apacsystems.ca"
-3. Initialize new local repository
-  > git init
-4. Add files and commit
-  - local master branch will not be created until this step is complete
-  - directory must not be empty
-  > git add .
-  > git commit -m "Initial commit"
-5. Create github repository and create pointer in local repository
-  - add ssh keys to github
-  > git remote add origin <url>
-6. Fetch master branch from remote repository
-  > git fetch origin master
-7. Merger master branches
-  > git merge origin/master --allow-unrelated-histories
-8. Push changes to github repo
-  > git push origin master
+Merging
+> git checkout main    // or branch to merge changes to
+> git merge otherBranch    // merges changes in otherBranch to main
 
+Install and configure git
+    1.  Install git
+        > sudo apt install git
+    2.  Set git config
+        > git config --global user.name "David Bull"
+        > git config --global user.email "david.bull@apacsystems.ca"
+
+For new local repo
+    1. Initialize repo in local directory
+        > git init
+    2. Add files and commit
+        ** local master/main branch will not be created until this step is complete
+        > git add .
+        > git commit -m "Initial commit"
+    3. Rename master to main (if applicable)
+        > git branch -m master main
+        or
+        > git branch -M main
+    4. Set remote origin
+        > git remote add origin <url>
+    5. Push to remote repo
+        ** add ssh keys to github first
+        > git push -u origin main
+
+To merge with existing repo
+    1. Steps 1-4 above
+    2. Fetch maste/main branch from remote repo
+        > git fetch origin <master/main>
+    3. Merge branches
+        * use option --allow-unrelated-histories if repos were created independently
+        > git merge origin/master --allow-unrelated-histories
+    4. Push to remote
+        > git push <origin master>
+
+Clone an existing repo
+    > git clone git@github.com:<git username>/<repo name>.git <local folder name>
+    ex.
+    > git clone git@github.com:iamthebull/cheatsheets.git cheatsheets
