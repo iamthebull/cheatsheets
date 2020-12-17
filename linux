@@ -5,6 +5,7 @@ System
     lscpu
   Storage
     lsblk
+    blkid
 
 Networking
     nmcli
@@ -21,4 +22,3 @@ usermod -aG groupname user ~ adds 'user' to the 'groupname' group
 DNS
 sudo systemd-resolve --flush-cache
 sudo systemd-resolve --statistics
-

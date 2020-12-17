@@ -1,0 +1,25 @@
+Find partition to mount
+    > lsblk
+    or
+    > sudo fdisk -l
+    - will be /dev/sdXX - eg. /dev/sdc1
+
+Find UUID for that partition
+    > blkid
+
+Create a mount point
+    > sudo mkdir /data
+    - create a user group called data
+    > sudo groupadd data
+    - add your user to that group
+    > sudo usermod -aG data david
+    - change ownership of mount point to add that group
+    > sudo chown -R :data /data
+
+Add automount entry
+    > sudo nano /etc/fstab
+    - add entry for example:
+    UUID=14D82C19D82BF81E /data    auto nosuid,nodev,nofail,x-gvfs-show 0 0
+
+Test if it works
+    > sudo mount -a
