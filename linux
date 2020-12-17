@@ -15,10 +15,16 @@ Networking
     nslookup <domain name>
     dig <domain name>
     systemd-resolve --status
-USERS
-adduser ~ interactive add user account
-usermod -aG groupname user ~ adds 'user' to the 'groupname' group
+
+Users/Groups
+    > adduser ~ interactive add user account
+    > usermod -aG groupname user ~ adds 'user' to the 'groupname' group
+    > less /etc/group ~ view all groups
+    > groups ~ lists all groups the user belongs to
+    > id [user] ~ similar to groups
+    > sudo groupadd groupname ~ adds group 'groupname'
+    > newgrp groupname ~ applies changes to group 'groupname' without having to logout/in
 
 DNS
-sudo systemd-resolve --flush-cache
-sudo systemd-resolve --statistics
+    > sudo systemd-resolve --flush-cache
+    > sudo systemd-resolve --statistics

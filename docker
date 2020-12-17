@@ -1,0 +1,31 @@
+
+Get info about docker
+> docker info
+
+Change location of docker data folder
+- add following to /etc/docker/daemon.json (or create the file)
+{"data-root":"/path/to/data/folder"}
+- restart docker
+> sudo systemctl daemon-reload
+> sudo systemctl restart docker
+
+List images
+> docker images
+
+Build an image from docker file
+> docker build -t imageName /path/to/docker/file
+ie. docker build -t pg13 .
+
+Remove image
+> docker rmi image_name_or_id
+or
+> docker image rm image_id
+
+Clean up images and containers
+> docker system prune
+
+docker stats <container>
+docker ps - running containers
+
+
+docker exec -it [container] /bin/bash
