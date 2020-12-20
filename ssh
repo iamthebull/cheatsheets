@@ -1,0 +1,45 @@
+# install openssh server
+sudo apt install openssh-server
+
+# check if server is running
+sudo systemctl status ssh
+# or
+service ssh status
+
+# check if firewall is enabled
+sudo ufw status
+# if enabled allow ssh
+sudo ufw allow ssh
+
+# backup config file
+sudo cp /etc/ssh/sshd_config /etc/ssh/sshd_config.default
+
+# edit config file
+sudo nano /etc/ssh/sshd_config
+
+# disable password authentication
+PasswordAuthentication no
+
+# restrict users - add to end of config file
+AllowUsers david
+
+# restart ssh server
+sudo service ssh restart
+# or
+sudo systemctl restart ssh
+
+# setting up keys
+# on the client keys will be in ~/.ssh folder
+# ie. ~/.ssh/id_rsa.pub
+# if not generate keys
+ssh-keygen -t rsa -b 4096
+# enter optional passphrase
+# need to add this key to the ~/.ssh/authorized_keys file on any server you want
+# to connect to
+# if password authentication is not yet disabled on server, from client use
+# ssh-copy-id <user>@<remoteserver>, ie.
+ssh-copy-id david@laptop1
+# if password authentication is disabled on server, copy id_rsa.pub from client
+# to server somehow then on server
+cat id_rsa.pub >> ~/.ssh/authorized_keys
+

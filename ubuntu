@@ -1,0 +1,19 @@
+# to add dns search suffix
+# edit /etc/systemd/resolv.conf
+# add suffix to Domains= line
+# for example
+Domains=telus
+
+# to fix screen tearing on nvidia gpu
+# create the file
+sudo nano /etc/modprobe.d/nvidia-drm-nomodeset.conf
+# add the line
+options nvidia-drm modeset=1
+# update initramfs
+sudo update-initramfs -u
+# reboot
+# confirm with
+sudo cat /sys/module/nvidia_drm/parameters/modeset
+# should return
+> Y
+
