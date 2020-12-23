@@ -1,0 +1,17 @@
+Install
+  > sudo apt install samba
+
+Configure
+  - edit /etc/samba/smb.conf
+
+Restart server
+  > sudo service smbd restart
+
+Configure firewall
+  > sudo ufw allow samba
+
+Add samba user
+  > sudo adduser <user>
+
+Add samba password for user
+  > sudo smbpasswd -a <user>
