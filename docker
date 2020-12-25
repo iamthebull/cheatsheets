@@ -6,6 +6,7 @@ Install on Linux Mint
 > sudo apt update
 > sudo apt install docker-ce
 > sudo usermod -aG docker <user>
+> sudo apt install docker-compose
 
 Get info about docker
 > docker info
