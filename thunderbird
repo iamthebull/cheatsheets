@@ -1,0 +1,24 @@
+Your name: David R. Bull
+Email Address: david.bull@apacsystems.ca
+Password: xxxxxxxx
+
+Incoming
+Protocol: IMAP
+Server: imap.ipage.com
+Port: 993
+SSL: SSL/TLS
+Authentication: Normal password
+Username: david.bull@apacsystems.ca
+
+Outgoing
+SMTP
+Server: smtp.ipage.com
+Port: 465
+SSL: SSL/TLS
+Authentication: Normal password
+Username: david.bull@apacsystems.ca
+
+# create soft link to mail folder files
+# use mail_links.sh script
+# make sure to set SOURCEDIR in script file
+# run file in Local Folders dir
