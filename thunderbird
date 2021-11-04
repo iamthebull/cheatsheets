@@ -21,4 +21,5 @@ Username: david.bull@apacsystems.ca
 # create soft link to mail folder files
 # use mail_links.sh script
 # make sure to set SOURCEDIR in script file
-# run file in Local Folders dir
+# run file in Local Folders dir - first make sure file is executable
+> /home/david/cheatsheets/mail_links.sh
