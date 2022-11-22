@@ -5,7 +5,7 @@ SOURCEDIR=/data/Mail/
 
 for TYPE in Inbox Sent
 do
-  for YEAR in {2008..2019}
+  for YEAR in {2008..2020}
   do
   SOURCE=$SOURCEDIR"$TYPE$YEAR"
   DEST=./"$TYPE$YEAR"
