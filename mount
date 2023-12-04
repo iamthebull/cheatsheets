@@ -8,20 +8,16 @@ Find UUID for that partition
     > blkid
 
 Create a mount point
-    > sudo mkdir /data
-    - create a user group called data
-    > sudo groupadd data
-    - add your user to that group
-    > sudo usermod -aG data david
-    - change ownership of mount point to add that group
-    > sudo chown -R :data /data
-    - change permissions on mount directory
-    > sudo chmod 775 /data
+    > sudo mkdir /media/david/MountDir
+    - change ownership of mount point
+    > sudo chown -R david:david /media/david/MountDir
 
 Add automount entry
     > sudo nano /etc/fstab
     - add entry for example:
     UUID=14D82C19D82BF81E /data    auto nosuid,nodev,nofail,x-gvfs-show 0 0
+    - for NTFS use
+    UUID="9478F8E178F8C2D2" /media/david/Mobile ntfs-3g defaults,nls=utf8,umask=000,dmask=027,fmask=137,uid=1000,gid=1000,windows_names 0 0
 
 Test if it works
     > sudo mount -a
