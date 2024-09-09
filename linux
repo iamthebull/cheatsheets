@@ -1,6 +1,14 @@
 # see installed kernels
 apt list --installed | grep linux-image
 
+### links
+# hard link
+ln <source file/folder> <link file/folder>
+# soft (symbolic) link
+ln -s <source file/folder> <link file/folder>
+# replace existing link
+ln -sf <source file/folder> <link file/folder>
+
 ### System
 # Display system info
 inxi -Fxz
