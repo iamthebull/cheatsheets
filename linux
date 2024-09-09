@@ -1,5 +1,7 @@
 # see installed kernels
 apt list --installed | grep linux-image
+# list active kernel
+uname -a
 
 ### links
 # hard link
