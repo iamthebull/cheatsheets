@@ -67,6 +67,13 @@ groups <user>
 # remove user
 sudo deluser --remove-home <user>
 
+### Package management
+# show package details
+apt show <package>
+# dependencies
+sudo apt depends <package>
+sudo apt rdepends <package>
+
 ### DNS
 sudo systemd-resolve --flush-cache
 sudo systemd-resolve --statistics
