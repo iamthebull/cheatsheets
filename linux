@@ -14,8 +14,15 @@ ln -sf <source file/folder> <link file/folder>
 ### System
 # Display system info
 inxi -Fxz
-lshw
+sudo lshw
 lscpu
+
+# GPU
+sudo lshw -c video
+inxi -G
+# show installed NVidia drivers
+apt list --installed | grep nvidia
+
 # Storage
 lsblk
 blkid
