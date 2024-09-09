@@ -1,30 +1,55 @@
-System
-  Display system info
-    inxi - Fxz
-    lshw
-    lscpu
-  Storage
-    lsblk
-    blkid
+# see installed kernels
+apt list --installed | grep linux-image
 
-Networking
-    nmcli
-  IP
-    ip addr ~ show ip address
-  DNS
-    nslookup <domain name>
-    dig <domain name>
-    systemd-resolve --status
+### System
+# Display system info
+inxi -Fxz
+lshw
+lscpu
+# Storage
+lsblk
+blkid
 
-Users/Groups
-    > adduser ~ interactive add user account
-    > usermod -aG groupname user ~ adds 'user' to the 'groupname' group
-    > less /etc/group ~ view all groups
-    > groups ~ lists all groups the user belongs to
-    > id [user] ~ similar to groups
-    > sudo groupadd groupname ~ adds group 'groupname'
-    > newgrp groupname ~ applies changes to group 'groupname' without having to logout/in
+### Networking
+nmcli
+# show IP address
+ip addr ~ show ip address
+# DNS
+nslookup <domain name>
+dig <domain name>
+systemd-resolve --status
 
-DNS
-    > sudo systemd-resolve --flush-cache
-    > sudo systemd-resolve --statistics
+### Users/Groups
+
+# all users are in /etc/passwd
+cat /etc/passwd
+# see if user exists on system
+cat /etc/passwd | grep <user>
+# all groups are in /etc/groups
+cat /etc/group
+# to find certain group
+cat /etc/group | grep <group>
+
+# add user (interactive)
+sudo adduser <user>
+# add user with home dir (manual)
+sudo useradd -m <user>
+sudo passwd <user>
+# add a new group
+sudo groupadd <group>
+# add user to group
+usermod -aG <group> <user>
+# apply changes to <group> without having to log in/out
+newgrp <group>
+
+# show id of user and groups user belongs to
+sudo id <user>
+# show groups user belongs to
+groups <user>
+
+# remove user
+sudo deluser --remove-home <user>
+
+### DNS
+sudo systemd-resolve --flush-cache
+sudo systemd-resolve --statistics
