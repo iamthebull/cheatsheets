@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=Pyzo
+Exec=/mydocs/freecad/fcenv/bin/python3 /mydocs/freecad/pyzo-main/pyzolauncher.py
+Icon=/mydocs/freecad/pyzo-main/pyzo/resources/appicons/pyzologo256.png
+Type=Application
+Terminal=false
