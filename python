@@ -1,0 +1,8 @@
+# create virtual environment with name vname
+python3 -m venv vname
+
+# activate the venv
+source vname/bin/activate
+
+# deactivate
+deactivate
