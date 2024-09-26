@@ -3,3 +3,17 @@ Install
 > sudo apt install virtualbox-ext-pack
 > sudo apt install virtualbox-guest-additions-iso
 > sudo usermod -aG vboxusers <user>
+
+# configure networks
+# add /etc/vbox/networks.conf with following contents
+* 10.0.0.0/8 192.168.0.0/16
+
+# create host only network adapters
+
+vboxnet0
+ipv4 address: 10.0.1.1
+mask: 255.255.255.128
+
+vboxnet1
+ipv4 address: 10.0.1.129
+mask: 255.255.255.128
