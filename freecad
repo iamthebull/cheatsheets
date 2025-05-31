@@ -1,0 +1,21 @@
+Using Appimage
+- download appimage from github
+
+- make AppImage file executable
+>> chmod +x FreeCAD_1.0.1-conda-Linux-x86_64-py311.AppImage
+
+- extract AppImage
+>> ./FreeCAD_1.0.1-conda-Linux-x86_64-py311.AppImage --appimage-extract
+
+- rename extracted directory
+>> mv squashfs-root freecad-1.0.1
+
+- create launch script from freecad-launch.sh template
+
+- create FreeCAD-1.0.1.desktop to run freecad-launch.sh
+[Desktop Entry]
+Name=FreeCAD-1.0.1
+Exec=/media/david/MyDocs/freecad/appimage/freecad-launch.sh
+Icon=/media/david/MyDocs/freecad/appimage/freecad-1.0.1/org.freecad.FreeCAD.svg
+Type=Application
+Terminal=false
