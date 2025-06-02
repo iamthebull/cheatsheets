@@ -16,8 +16,9 @@ Add automount entry
     > sudo nano /etc/fstab
     - add entry for example:
     UUID=14D82C19D82BF81E /data    auto nosuid,nodev,nofail,x-gvfs-show 0 0
+    UUID="74cda073-6231-4a02-ba49-7d698ff374fe" /media/david/MyDocs ext4    nosuid,nodev    0   0
     - for NTFS use
-    UUID="9478F8E178F8C2D2" /media/david/Mobile ntfs-3g defaults,nls=utf8,umask=000,dmask=027,fmask=137,uid=1000,gid=1000,windows_names 0 0
+    UUID="9478F8E178F8C2D2" /media/david/Mobile ntfs-3g uid=1000,gid=1000,dmask=0022,fmask=0122 0 0
 
 Test if it works
     > sudo mount -a
