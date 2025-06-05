@@ -1,10 +1,9 @@
 Install
-> sudo apt install virtualbox
-> sudo apt install virtualbox-ext-pack
-> sudo apt install virtualbox-guest-additions-iso
+> sudo apt install virtualbox virtualbox-ext-pack virtualbox-guest-additions-iso
 > sudo usermod -aG vboxusers <user>
 
 # configure networks
+# On Linux, macOS and Solaris Oracle VirtualBox will only allow IP addresses in 192.168.56.0/21 range to be assigned to host-only adapters. For IPv6 only link-local addresses are allowed. If other ranges are required, they can be enabled by creating /etc/vbox/networks.conf and specifying allowed ranges there.
 # add /etc/vbox/networks.conf with following contents
 * 10.0.0.0/8 192.168.0.0/16
 
