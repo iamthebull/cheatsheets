@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=FreeCAD 1.0.1
+Exec=/media/david/MyDocs/freecad/appimage/freecad-1.0.1-launch.sh
+Icon=/media/david/MyDocs/freecad/appimage/freecad-1.0.1/org.freecad.FreeCAD.svg
+Type=Application
+Terminal=false

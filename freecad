@@ -10,12 +10,9 @@ Using Appimage
 - rename extracted directory
 >> mv squashfs-root freecad-1.0.1
 
+- create home dir
+>> mkdir freecad-1.0.1-home
+
 - create launch script from freecad-launch.sh template
 
-- create FreeCAD-1.0.1.desktop to run freecad-launch.sh
-[Desktop Entry]
-Name=FreeCAD-1.0.1
-Exec=/media/david/MyDocs/freecad/appimage/freecad-launch.sh
-Icon=/media/david/MyDocs/freecad/appimage/freecad-1.0.1/org.freecad.FreeCAD.svg
-Type=Application
-Terminal=false
+- create .desktop file from freecad.xxx.desktop template and save to ~/.local/share/applications
