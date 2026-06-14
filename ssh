@@ -8,6 +8,8 @@ service ssh status
 
 # check if firewall is enabled
 sudo ufw status
+# enable firewall
+sudo ufw enable
 # if enabled allow ssh
 sudo ufw allow ssh
 
