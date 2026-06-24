@@ -5,14 +5,13 @@
 # that works even if disks are added and removed. See fstab(5).
 #
 # <file system> <mount point>   <type>  <options>       <dump>  <pass>
-# / was on /dev/sda3 during installation
-UUID=3211ae3b-89ea-4f0e-9cb6-0c9cf5c3a587 /               ext4    errors=remount-ro 0       1
-UUID=A6FEF34CFEF31373 /share    auto nosuid,nodev,nofail,x-gvfs-show 0 0
-UUID=58F01FFFF01FE254 /data    auto nosuid,nodev,nofail,x-gvfs-show 0 0
-UUID=A020374420372128 /data2    auto nosuid,nodev,nofail,x-gvfs-show 0 0
-UUID=36E84FD4E84F9153 /data3    auto nosuid,nodev,nofail,x-gvfs-show 0 0
-UUID=7a04ff0c-75e8-4442-ad54-57694258ccf4 /mydocs    auto nosuid,nodev,nofail,x-gvfs-show 0 0
-# /boot/efi was on /dev/sda1 during installation
-UUID=B71C-5E2B  /boot/efi       vfat    umask=0077      0       1
-# swap was on /dev/sda2 during installation
-UUID=4e226004-41c2-4a2d-b30b-3ab2764bcf9f none            swap    sw              0       0
+#
+# DevLaptop
+UUID="9478F8E178F8C2D2" /media/david/Mobile auto uid=1000,gid=1000,dmask=0007,fmask=0117 0 0
+UUID="74cda073-6231-4a02-ba49-7d698ff374fe" /media/david/MyDocs auto nosuid,nodev 0 0
+#
+# Desktop1
+UUID=A6FEF34CFEF31373 /media/shared auto uid=1001,gid=1001,dmask=0007,fmask=0117 0 0
+UUID=18371206-dce8-48f4-ad61-8c1a6a83de41 /media/extra auto defaults 0 0
+UUID=3e05bdd4-8655-485e-afd7-335b492827ee /media/david/data auto defaults 0 0
+UUID=7a04ff0c-75e8-4442-ad54-57694258ccf4 /media/david/mydocs auto defaults 0 0
