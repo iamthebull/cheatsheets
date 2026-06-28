@@ -19,11 +19,12 @@ sudo cp /etc/ssh/sshd_config /etc/ssh/sshd_config.default
 # edit config file
 sudo nano /etc/ssh/sshd_config
 
-# disable password authentication
+# config settings
 PasswordAuthentication no
-
-# restrict users - add to end of config file
 AllowUsers david
+PermitRootLogin no
+Protocol 2
+ClientAliveInterval 300
 
 # restart ssh server
 sudo service ssh restart
