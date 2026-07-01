@@ -1,0 +1,16 @@
+Create EFI partition
+> sudo fdisk /dev/sdX
+> n - for new partition
+> +512M
+> t - change type
+> uefi
+> w - write changes
+> mkfs.vfat -F 32 /dev/sdXn
+
+Create ext4 partition
+> sudo fdisk /dev/sdX
+> n - new partition
+> +32G
+> w - write changes
+> mkfs.ext4 /dev/sdXn
+
